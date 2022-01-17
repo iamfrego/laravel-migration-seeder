@@ -13,7 +13,11 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         
     </head>
-    <body>
+    <body class="bg-black">
+        <nav class="nav bg-black">
+          <a class="nav-link" href="{{route('index')}}">Flight</a>
+          <a class="nav-link" href="{{route('blog')}}">Blog</a>
+        </nav>
         @yield('content')
     </body>
 </html>

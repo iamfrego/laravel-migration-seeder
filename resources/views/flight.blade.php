@@ -2,18 +2,26 @@
 
 @section('content')
 
-<h1>List of Flight</h1>
-
-<div class="flights">
-    @foreach ($flights as $flight)
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">{{$flight->name}}</h5>
-                <p class="card-text">{{$flight->airline}}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="container">
+    <h1 class="text-white mb-5">List of Flight</h1>
+    <div class="flights">
+        <div class="container">
+            <div class="row row-cols-4 gy-4">
+                @foreach ($flights as $flight)
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize">Destinazione: {{$flight->name}}</h5>
+                            <p class="card-text">Compagnia Aerea: {{$flight->airline}}</p>
+                            <p class="card-text">Prezzo: {{$flight->price}}€</p>
+                            <button type="button" class="btn btn-dark">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
             </div>
         </div>
-    @endforeach
+    </div>
 </div>
 
 @endsection

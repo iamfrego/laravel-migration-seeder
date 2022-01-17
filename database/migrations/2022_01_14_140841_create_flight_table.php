@@ -17,6 +17,7 @@ class CreateFlightTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('airline');
+            $table->float('price');
             $table->timestamps();
         });
     }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FlightsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('flight');
-});
+Route::get('/', 'FlightsController@flights')->name('index');
+
+Route::get('/blog', 'BlogController@flights')->name('blog');
