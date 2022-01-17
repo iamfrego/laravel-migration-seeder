@@ -29,7 +29,7 @@ class CreateFlightTable extends Migration
     public function down()
     {
         Schema::table('flights', function (Blueprint $table) {
-            //
+            
         });
     }
 }
